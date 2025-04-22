@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro exercício & Comandos</title>
+</head>
+
+<body>
+  <!--  anotação aleatoria : oportunidadeagora.com
+
+  envelopar com abreviação
+ 
+SITES DE AUXILIO NA CONSTRUÇÃO DA PAGINA:
+
+Pexels, site de imagens e videos sem direitos autorais.
+
+youtube studio -> biblioteca de audio
+
+iana.org, para downloads 
+
+Gimp,para editar e redimensionar imagens
+
+Emoji
+
+Unsplash,pra pegar imagens sem direitos autorais
+
+Site para buscar FAVICON:  iconarchive ou favico.io
+
+qr code gerator
+
+------------------------------------
+COMANDOS:
+CTRL SHIFT P -> envelopar algo dentro de um codigo
+
+SEGURE CTRL ENTER -> inicio da proxima linha
+
+SHIFT ALT F -> indentar 
+
+CTRL CLIQUE -> criar arquivo
+------------------------------------
+ESTILO <style></style>
+ex:p {
+        margin:0%;
+        color: chartreuse;
+    } neste caso, a cor das letras será amarelo, e o espaçamento do proximo paragrafo será de 0(ou seja, paragrafos colados)
+------------------------------------
+
+pra criar a estrutura básica do HTML:    !Enter 
+------------------------------------
+criar titulo coloca-se entre o <head> </head>   <title> e </title>
+------------------------------------
+criar BOTÃO   <button>Like</button>
+QUEBRAR LINHA  <br> 
+texto em ITALICO <em> e </em>
+texto em NEGRITO <strong> e </strong>
+------------------------------------
+/////////// VIDEOS \\\\\\\\\\\\\
+Pexels, site de imagens e videos sem direitos autorais.
+
+Handbrake
+Arraste o video para o handbrake.
+
+<video src="../ex012/midia/Meu Video.mp4(endereço do video)" controls(codigo para mostrar os controles no video) height="300" width="500"(ajuste a altura e largura do video) ></video>
+
+ex:<video src="../ex012/midia/Meu Video.mp4" controls height="300" width="500" ></video>
+
+Se o video não for compativel, coloque todos os sources possiveis:
+ex: <video >
+        <source src="endereço do video.(tem mp4, m4v, webm, ogv)" type="(nome do video.tipo de video, como esta acima)"
+    </video>
+
+Para colocar capa de video
+poster="endereço da capa de video"
+ex: <video poster="midia/capa_tartaruga.jpg" src="../ex012/midia/Meu Video.mp4" controls height="300" width="500" ></video>
+OS CODIGOS ACIMA PODEM GERAR MAIS CUSTOS PARA O CLIENTE
+
+Outro modo de colocar um video:
+youtube-> compartilhar-> incorporar(vai mostrar um codigo HTML), copiar e colar.
+METODO PARA NÃO CONSUMIR A SUA INTERNET OU DO SEU SERVIDOR.
+
+
+------------------------------------
+/////////// AUDIOS \\\\\\\\\\\\\
+Dica de busca de alguns audios:
+youtube studio -> biblioteca de audio
+<audio src="midia/audio-youtube.mp3(endereço do audio)" controls autoplay> </audio>
+
+tambem pode codar <audio preload=(auto, metadata ou none)>
+------------------------------------
+/////////// LINKS \\\\\\\\\\\\\\\
+criar LINK <a href="URL da pagina" >caractere qualquer</a>
+
+LINK sem que sua pagina seja sobreposta, outra aba é criada para o link
+<a href="URL da pagina"target="_blanck" rel="external" >caractere qualquer</a>
+
+//////// LINK INTERNO \\\\\\\\\\\\\\
+ex:<a href="pag002.html(ctrl espaço)">Segunda pagina do site</a>
+<a href="index.html(ctrl espaço)">volte para a primeira pagina</a>
+
+Precisa-se colocar ../ quando for colocar links de outras pastas
+ex: 
+<p><a href="pag002.html"rel="next">Segunda pagina do site</a></p>
+
+<p><a href="index.html"rel="prev">volte para a primeira pagina</a></p>
+
+<p>Va para a terceira pagina <a href="pag003/pag003.html">clique aqui</a></p>
+
+<p>clique <a href="../index.html">aqui</a> para voltar a primeira</p>
+A primeira e a segunda pagina estão em uma pasta, mas a terceira esta em outra pasta
+
+//////// LINK DE DOWNLOAD \\\\\\\\\
+<a href="(ctlr espaço)" download="(nome do arquivo)" type="(procure no iana.org o tipo de download)"> caractere qualquer</a>
+
+ex:
+<a href="livro/Currículo_Felipe.zip(ctrl espaço)" download="Currículo_Felipe(nome do arquivo)" type="(procure no iana.org, neste exemplo sera->)application/zip"> baixe o teste pdf zip </a>
+
+iana.org/assignments/media-types
+
+rel="next"
+rel="prev"
+
+------------------------------------
+/////////  IMAGEM  \\\\\\\\\\\\
+<img src=”URL da imagem height=”100” width=”100””> caractere qualquer </img>
+dica no código img:salve a imagem na pasta, depois no código digte img Enter, e no lugar onde vai o URL da imagem(pressione ctrl espaço)
+
+//////// IMAGENS DINAMICAS \\\\\\\\\
+1) primeiro crie a codigo  <picture> </picture>
+2) depois dentro do codigo picture crie o codigo <img></img> (nesse codigo img que você coloca a maior imagem)
+3) logo acima do codigo img, você cria o codigo source(media type), ex:
+<source media="(max-width: 850px)"(maximo de largura em pixels) srcset="imagens/foto-p.png"(endereço da imagem)
+ type="image/png"(tipo de imagem, nesse caso é png)>
+4) IMPORTANTE: a ordem das imagens é de baixo para cima. (a maior imagem fica em embaixo, enquanto imagens menores (em ordem de tamanho) ficam acima)
+
+
+Ex de como fazer imagens flexiveis:
+<picture>
+    <source media="(max-width: 850px)" srcset="imagens/foto-p.png" type="image/png">
+
+    <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+
+    <img src="imagens/foto-g.png" alt=" ">
+</picture>
+------------------------------------
+///////////  GIMP  \\\\\\\\\\\\\\
+para editar e redimensionar imagens
+------------------------------------
+///////////  EMOJI  \\\\\\\\\\\\\\
+&#x(codigo do EMOJI); ex: &#x1F604
+unsplash,pra pegar imagens sem direitos autorais
+------------------------------------
+/////////// FAVICON \\\\\\\\\\\\\\
+Site para buscar FAVICON:  iconarchive ou favico.io
+
+FAVICON   <link rel="shortcut icon" href="ctrl espaço(escolha o icon)" type="image/x-icon">
+Favicon também é colocado dentro da parte <head></head>
+------------------------------------
+Hierarquia de titulos 
+h1,h2,h3,h4,h5,h6
+------------------------------------
+////////// MARCAR TEXTOS \\\\\\\\\\\
+<mark> </mark>
+para mudar cor, background-color
+------------------------------------
+ATALHO PARA COLOCAR ALGO ESCRITO DENTRO DE UM CODIGO,
+ seleciona o que esta escrito, ctrl shift p, envolver com abreviação Enter, digite o codigo Enter
+------------------------------------
+////////////// STYLE \\\\\\\\\\\\\\ 
+escrito dentro de <head>, muda <head>
+    <style>
+        mark{
+        background-color: rgb(0, 42, 255); 
+        </style>
+    </head>
+        Muda todos os "mark" para a cor selecionada.
+
+    Ja nesse exemplo 
+    <mark style="background-color: chartreuse;">1981,1996</mark>
+    Só o que estiver dentro do codigo sera alterado para a cor selecionada.
+------------------------------------
+TEXTO PEQUENO <small></small>
+------------------------------------
+TEXTO RISCADO ou DELETADO <del> </del>
+------------------------------------
+TEXTO INSERIDO <ins></ins>
+------------------------------------
+TEXTO SUBLINHADO <u></u>
+------------------------------------
+TEXTO SOBRESCRITO, texto um pouco acima da linha original <sup></sup>
+------------------------------------
+CODIGOS FONTE, FORMATAÇÃO DE TEXTO
+
+deixar o texto mais bonito 
+<code></code>
+
+vai aparecer exatamente como esta escrito <pre></pre>
+------------------------------------
+CITAÇÃO "entre aspas" <q></q>
+CITAÇÃO COMPLETA 
+<blockquote></blockquote>
+pode tambem colocar 
+<blockquote cite= URL> </blockquote>
+------------------------------------
+SIGNIFICADO DA ABREVIAÇÃO
+<abbr title="gremio football porto-alegrense"> GFBPA </abbr>
+------------------------------------
+TEXTO INVERTIDO <bdo></bdo>
+-----------------------------
+///////// LISTA ORDENADA \\\\\\\\\\
+<ol></ol>
+
+////////// LISTAR ITEM \\\\\\\\\\\\
+<li></li>
+
+ex:<ol>
+        <li>gremio</li>
+        <li>red bull</li>
+        <li>inter</li>
+        <li>palmeiras</li>
+    </ol>
+ tambem <ol type"(tipo de ordenação)">
+----------------------------------
+LISTA NÃO ORDENADA <ul></ul>
+----------------------------------
+JUNÇÃO DE LISTAS 
+<ol> 
+    <li>  </li> 
+</ol>
+----------------------------------
+LISTA DE DEFINIÇÃO(COMO UM DICIONARIO)
+TERMO     <dt></dt>
+DEFINIÇÃO <dd></dd>
+----------------------------------
+
+
+
+
+
+
+
+
+-->
+
+
+
+</body>
+
+</html>
