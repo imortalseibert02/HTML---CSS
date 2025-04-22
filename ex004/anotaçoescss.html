@@ -45,7 +45,7 @@ FONT: font-style, font-weight, font-size, font-family;
 Ex: 
 font:  bold 2em arial ;(peso, tamanho, fonte)
 ------------------------------------
-COMO ADICIONAR FONTES AO CODIGO: CAP 14 AULA 06
+///////////COMO ADICIONAR FONTES AO CODIGO: CAP 14 AULA 06\\\\\\\\\\\\\\
 1) vá até o google fontes, procure a fonte que desejar(ex:work sans).
 2) em seguida copie o codigo da fonte em css e cole entre o codigo style, e logo depois, insira a mesmo nome da fonte onde deseja editar.
 Ex: @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -53,7 +53,7 @@ h2 {
     font-family: Bebas Neue;
 }
 ------------------------------------
-BAIXAR FONTES ex:dafontes
+/////////////BAIXAR FONTES\\\\\\\\\\\ ex:dafontes
 1) pesquise no google dafontes, baixe a fonte da letra que desejar.
 2) colocar o arquivo baixado em uma pasta, pra ficar mais organizado.
 
@@ -78,7 +78,7 @@ embedded-opentype
 truetype-aat
 svg
 ------------------------------------
-CAP 14 AULA 10
+//////////CAP 14 AULA 10\\\\\\\\\\\
 ALINHAMENTO DE TEXTOS
 text-align: left, center, right ou justify;
 ------------------------------------
@@ -101,7 +101,7 @@ line-height: 1.5em;(espaçamento entre linhas)
 Display: inline-block(faz com que as caixas e elementos fiquem em linha)
 Display: block (faz com que as caixas e elementos fiquem uma em cada linha, quebrando o texto)
 
-CAP 15 AULA 01 
+////////////CAP 15 AULA 01 \\\\\\\\\\
 ID COM CSS, aula de identificadores
  Dentro de uma mesma pagina, há muitos h1 e h2, mas como diferencia-los? usando id=" "
  é como conseguimos diferenciar nossas tags.
@@ -125,7 +125,7 @@ IMPORTANNTE
 Em HTML é id, em CSS é #
 Em HTML é class, em CSS é .
 -----------------------------------
-CAPITULO 15 AULA 02
+////////CAPITULO 15 AULA 02\\\\\\\\
 Id é personalização individual.
 Para personalizar várias tags com a mesma edição usa-se class. 
 Ex:
@@ -152,8 +152,8 @@ Aprendendo HTML</h1>
 
 O h1 esta personalizado pela classe destaque e intermediario. Sua cor será da classe destaque e a cor de fundo será da classe intermediario.
 -----------------------------------
-CAP 15 AULA 03
-PSEUDO CLASSE EM CSS
+//////////CAP 15 AULA 03
+PSEUDO CLASSE EM CSS\\\\\\\\\\\\\
 pseudo classes estão relacionadas ao estado de um elemento.
 ex: 
 div:active, ou checked, ou empty, ou enabled;
@@ -211,8 +211,8 @@ a:visited{
 }quando ja tiver clicado no link e acessado o site correspondente.
 
 -----------------------------------
-CAP 15 AULA 04 
-PSEUDO ELEMENTOS EM CSS
+//////////////CAP 15 AULA 04 
+PSEUDO ELEMENTOS EM CSS\\\\\\\\\\\
 
 pseudo elementos se referem a edição, personalização do elemento.
 
@@ -240,7 +240,7 @@ MODELO DE CAIXAS NA PRATICA
 Para praticar use o devtools.
 CNTRL SHIFT I
 -----------------------------------
-CAP 16 AULA 03
+//////////////CAP 16 AULA 03\\\\\\
 As edições de padding, border, margin são feitas como um relogio, no sentido horário.
 
 shortands de
@@ -255,8 +255,8 @@ margin:20px auto 40px auto (margem automatica na hirzontal)
 
 outline: 5px dashed black
 -----------------------------------
-CAP 16 AULA 04
-GROUPING TAGS em HTML
+/////////////////CAP 16 AULA 04
+GROUPING TAGS em HTML\\\\\\\\\\\\\\
 (Organização do site)
 
 <header> </header> cabeçalho
@@ -283,10 +283,10 @@ SOMBRAS NAS CAIXAS
 -----------------------------------
 CAP 16 AULA 06
 -----------------------------------
-CAP 17 AUL 03
+////////////CAP 17 AUL 03\\\\\\\\\\
 Mokflow - site de layouts
 -----------------------------------
-Capítulo 17 Aula 6 – Variáveis em CSS
+//////Capítulo 17 Aula 6 – Variáveis em CSS\\\\\\\\\\\\\\\\\
 
 :root{
    --(nome da variavel): o que a variavel faz
@@ -306,7 +306,7 @@ sempre com -- na frente do nome da variavel,(que no exemplo é "cor").
 
 a variavel facilita no caso de ter que mudar algumas coisas, não precisa ir tag por tag modificar, apenas alterar a variavel correspondente.
 -----------------------------------
-CAPITULO 17 AULA 07 – Responsividade para sites
+////////////CAPITULO 17 AULA 07 – Responsividade para sites\\\\\\\\\\
 
  Pode colocar no body, ou main
     min-width: 320px;
@@ -336,7 +336,7 @@ Para quebrar as imagens, use source media dentro da tag picture:
             </picture>
 
 -----------------------------------
-CAPITULO 17 AULA 11 – Rodapé, conteúdo periférico e links
+/////////CAPITULO 17 AULA 11 – Rodapé, conteúdo periférico e links\\\\\\\\\\\\\
 
 list-style-position: inside;(codigo para colocar listar dentro da margem)
 
@@ -349,7 +349,7 @@ a.externo::after{
     content: '\00A0\1F517';
 } (criamos nesse exemplo, uma classe para colocar o emoji de link )
 -----------------------------------
-CAPITULO 17 AULA 12 Tornando um vídeo responsivo
+///////////CAPITULO 17 AULA 12 Tornando um vídeo responsivo\\\\\\\\\\\\\\\
 
 div.video{
     background-color: var(--cor4);
@@ -368,8 +368,33 @@ height: 90% ;
 }
 
 Para tornar responsivo o video neste exemplo, criamos uma div class="video". 
+-----------------------------------
+///////////////Capítulo 19 Aula 02 – Colocando uma imagem de fundo no seu site\\\\\\\\\\\\
 
+No exemplo abaixo criamos divs, colocamos classes e ids nessas divs.
 
+comandos:
+background-image: url(endereço da imagem);
+
+Ex:
+body{
+        background-image: url(imagens/pattern003.png);
+    }
+
+    <div class="quadrado" id="q1"> </div>
+
+    div.quadrado{
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 300px;
+        height: 300px;
+        background-color: cyan;
+    }
+
+div#q1{
+    background-color: cadetblue;
+}
 -----------------------------------
 CSS IN LINE: funciona, mas não é muito recomendado. Pois pode dar muito trabalho. Porcausa de sua edição em linha de cada codigo.
 Você vai codar o estilo individualmente em cada codigo.
