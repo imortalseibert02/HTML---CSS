@@ -5,34 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>teste de imagem de fundo </title>
-<style>
+    <style>
+        body {
+            
 
-    body{
-        background-image: url(imagens/pattern003.png);
-    }
-    
-    div.quadrado{
-        display: inline-block;
-        border: 2px solid black;
-        border-radius: 10px;
-        width: 300px;
-        height: 300px;
-        background-color: cyan;
-    }
+        }
 
-div#q1{
-    background-color: cadetblue;
-}
+        div.quadrado {
+            height: 97vh;
+            display: flex;
+            border: 2px solid black;
+            border-radius: 10px;
+           
+            height: 140px;
+            background-color: cyan;
+        }
 
-div#q2{
-    background-image: linear-gradient(to top, orange, red);
-}
+        div#q1 {
+            background-image: url(imagens/wallpaper003.jpg);
+            background-position: top left;
+        }
 
-div#q3{
-    background-image: url(imagens/wallpaper002.jpg);
-}
+        div#q2 {
+            background-image: url(imagens/wallpaper003.jpg);
+            background-position: top right;
+        }
 
-</style>
+        div#q3 {
+            background-image: url(imagens/wallpaper003.jpg);
+            background-position: bottom right;
+        }
+
+        div#q4 {
+            background-image: url(imagens/wallpaper003.jpg);
+            background-position: bottom left;
+        }
+
+        div#q5 {
+            background-image: url(imagens/wallpaper003.jpg);
+            background-position: center center;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -51,7 +65,14 @@ div#q3{
 
     </div>
 
+    <div class="quadrado" id="q4">
 
+    </div>
+
+
+    <div class="quadrado" id="q5">
+
+    </div>
 
 </body>
 
