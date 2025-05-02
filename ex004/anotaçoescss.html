@@ -400,11 +400,6 @@ comando avulso:
 background-repeat: no-repeat;
 -----------------------------------
 ////////Capítulo 19 Aula 03 – Imagens que se repetem no fundo do site\\\\\\\\\\\\
-
-
-
-
-
 ------------- ---------
 Capítulo 19 Aula 04 – Configurando a posição da imagem no fundo do site
 
@@ -425,6 +420,64 @@ background-attachment: fixed; a imagem de fundo ficará parada, fixada.
 shorthand do background:
 color image position repeat size attachment;
 ------------------------------------
+//////////Capítulo 19 Aula 07 – Centralização vertical de caixas\\\\\\\\\\\\\
+
+precisa-se de um container e de um conteudo, no caso class.
+ex:
+.container{
+    height: 96vh;(a classe container ocupar toda a tela do pc)
+    background-color: blue;
+    padding: 10px;
+   background-image: url(imagens/target001.png);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   position: relative;
+}
+
+.contido{
+    background-color: brown; (cor do objeto)
+    height: 200px;(tamanho)
+    width: 400px;(tamanho)
+    background-image: url(imagens/target001.png);(imagem de fundo)
+   background-repeat: no-repeat;(sem repeticao de imagem de fundo)
+   background-size: 100% 100%;(aparecer 100% da imagem de fundo )
+
+   (a partir desses codigos abaixo voce vai conseguir deslocar o objeto)
+   position: absolute;(ficara numa posicao absoluta, no caso parado )
+   top: 50%;(top e left para colocar o objeto na posicao absoluta desejada)
+   left: 50%;
+    transform: translate(-50%, -50%); (ai com transform:translate voce consegue deslocar o objeto para onde desejar.)
+}
+
+o objeto que vai conter algo, no caso é classe container, será position:relative, enquanto o objeto que será contido, no caso, a classe contido será position:absolute. 
+-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------
+/////////CRIANDO FORMULARIOS\\\\\\\\\
+
+
 
 
 
