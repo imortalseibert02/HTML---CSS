@@ -17,6 +17,13 @@
             border-collapse: collapse;
         }
 
+        caption{
+            padding: 10px;
+            font-size: 1.5em;
+            background-color: crimson;
+            color: white;
+        }
+
         td,
         th {
             padding: 8px;
@@ -36,6 +43,10 @@
 
         .num {
             text-align: right;
+        }
+
+        tbody > tr:nth-child(odd){
+        background-color: rgb(228, 212, 192);
         }
     </style>
 
@@ -80,12 +91,16 @@ TABLE DATA = dados da tabela (td)
     </table>
     
     ANATOMIA DE TABELAS GRANDES
-    THEAD
-    TBODY
-    TFOOT
+    CAPTION <caption> </caption>
+    THEAD <thead> </thead>
+    TBODY <tbody> </tbody>
+    TFOOT <tfoot> </tfoot>
     -->
 
     <table>
+        <caption>
+            População das unidades federativas
+        </caption>
         <thead>
             <tr>
                 <th>Estado</th>

@@ -533,6 +533,13 @@ CSS
             border-collapse: collapse;
         }
 
+        caption{
+            padding: 10px;
+            font-size: 1.5em;
+            background-color: crimson;
+            color: white;
+        }
+
         td,
         th {
             padding: 8px;
@@ -550,6 +557,10 @@ CSS
             text-align: center;
         }
 
+        tbody > tr:nth-child(odd){
+        background-color: rgb(228, 212, 192);
+        } (efeito zebrado)
+
         .num {
             text-align: right;
         }
@@ -559,51 +570,56 @@ CSS
 
 HTML
 <table>
-    <thead>
-        <tr>
-            <th>Estado</th>
-            <th>População</th>
-        </tr>
-    </thead>
+    <caption>
+        População das unidades federativas
+    </caption>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
 
-    <tbody>
-        <tr>
-            <td>São Paulo</td>
-            <td class="num">45.900.000</td>
-        </tr>
-        <tr>
-            <td>Minas Gerais</td>
-            <td class="num">21.100.000</td>
-        </tr>
-        <tr>
-            <td>Rio de Janeiro</td>
-            <td class="num">17.200.000</td>
-        </tr>
-        <tr>
-            <td>Bahia</td>
-            <td class="num">14.800.000</td>
-        </tr>
-        <tr>
-            <td>Parana</td>
-            <td class="num">11.400.000</td>
-        </tr>
-        <tr>
-            <td>Rio Grande do Sul</td>
-            <td class="num">11.300.000</td>
-        </tr>
-    </tbody>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.900.000</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.100.000</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.200.000</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.800.000</td>
+            </tr>
+            <tr>
+                <td>Parana</td>
+                <td class="num">11.400.000</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.300.000</td>
+            </tr>
+        </tbody>
 
-    <tfoot>
-        <tr>
-            <td>
-                Total de Habitantes
-            </td>
-            <td>
-                121.700.000
-            </td>
-        </tr>
-    </tfoot>
+        <tfoot>
+            <tr>
+                <td>
+                    Total de Habitantes
+                </td>
+                <td>
+                    121.700.000
+                </td>
+            </tr>
+        </tfoot>
     </table>
+-------------------------------------
+Capítulo 21 Aula 06 – Efeito Zebrado na tabela com HTML e CSS
 
 
 
