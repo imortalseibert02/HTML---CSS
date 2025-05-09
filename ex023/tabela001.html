@@ -12,12 +12,12 @@
         }
 
         table {
-
+            position: relative;
             width: 500px;
             border-collapse: collapse;
         }
 
-        caption{
+        caption {
             padding: 10px;
             font-size: 1.5em;
             background-color: crimson;
@@ -41,12 +41,18 @@
             text-align: center;
         }
 
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: cadetblue;
+        }
+
         .num {
             text-align: right;
         }
 
-        tbody > tr:nth-child(odd){
-        background-color: rgb(228, 212, 192);
+        tbody>tr:nth-child(odd) {
+            background-color: rgb(228, 212, 192);
         }
     </style>
 
