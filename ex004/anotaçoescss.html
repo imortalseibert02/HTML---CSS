@@ -13,6 +13,10 @@ Paletton.com
 Coolors
 Myfont 
 
+Organizado, focado, comunicativo, respeito a autoridade, vontade de aprender e produzir.
+Tenho conhecimento em HTML, CSS e SQL.
+Tenho interesse em começar em um estágio na área de tecnologia, melhor seria perto de desenvolvimento de sistemas.
+Também tenho interesse em ingressar em uma empresa da área e poder crescer na mesma. Focando primeiramente em Front-End, e mais adiante em Back-End entre outras áreas da tecnologia. 
 -->
 
 <body>
@@ -455,6 +459,7 @@ Capítulo 20 Aula 06 – Imagens com efeito Parallax simples
 
 background-attachment: fixed;
 -------------------------------------
+///////////////// TABELAS \\\\\\\\\\\\\\\\\\\
 Capítulo 21 Aula 02 – Sua primeira tabela em HTML
 
 hierarquia de tabela(simples)
@@ -625,9 +630,54 @@ HTML
         </tfoot>
     </table>
 -------------------------------------
+Capítulo 21 Aula 08 – Mesclagem de células
 
+<title>mesclagem tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
 
+        }
 
+        table {
+            border-collapse: collapse;
+            width: 300px;
+
+        }
+
+        tr,
+        td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+    </table>
+</body>
+------------------------------------------
 
 
 
@@ -649,7 +699,7 @@ HTML
 
 
 
--------------
+-------------------------------------
 CSS IN LINE: funciona, mas não é muito recomendado. Pois pode dar muito trabalho. Porcausa de sua edição em linha de cada codigo.
 Você vai codar o estilo individualmente em cada codigo.
 -----------------------------------
