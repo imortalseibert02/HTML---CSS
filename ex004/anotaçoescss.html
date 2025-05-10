@@ -687,6 +687,9 @@ rowgroup=grupo de linhas
 ----------------------------------
 Capítulo 21 Aula 13 – Agrupando Colunas com colgroup
 
+Para a tabela não fazar pra fora da tela outer rolagem, coloque a tabela dentro de uma div, nessa div coloque oferflow x ou y em auto. 
+Vai fazer com que o conteudo nao seja afetdo pela rolagem que a tabela jera.
+
 Organizarmos algo por coluna, exemplo background-color
 
 desafio feito para melhor entendimento no arquivo d014, des_cap21a12.html
@@ -708,12 +711,32 @@ desafio feito para melhor entendimento no arquivo d014, des_cap21a12.html
 
         </tr>
     </colgroup>
+---------------------------------------------
+/////////////////// IFRAMES \\\\\\\\\\\\\\\\\\\
+são elementos HTML que permitem incorporar uma página dentro de outra. Eles são muito usados para exibir conteúdos externos, como vídeos do YouTube, mapas do Google Maps ou até mesmo documentos hospedados em outros sites2.
 
+Principais características do iframe:
+Permite exibir uma página dentro de outra sem precisar redirecionar o usuário.
 
+Pode ser usado para incorporar vídeos, formulários, banners e outros conteúdos externos.
 
+Funciona como uma "janela" dentro da página principal, sem interferir no código da página original.
 
+Pode ser configurado com atributos como width, height, border e scrolling.
 
+<iframe src="../abnh/index.html" name="frame" frameborder="0"> </iframe>
 
+Como colocar a imagem de um link dentro do iframe?
+<ul>
+    <li><a href="../gremio/gremio.html" target="frame">gremio</a></li>    
+    <li><a href="../d014/des_cap21a12.html" target="frame">tabelas</a></li>
+    <li><a href="../ex023/tabela003.html" target="frame">tabela03</a></li>
+</ul>
+
+    <iframe src="" name="frame" frameborder="0"></iframe>
+
+(ao clicar em um desses links acima, a pagina sera mostrada dentro do iframe. 
+Vale lembrar que o iframe precisa de um novo para poder ter a referencia para onde os links vão direcionar )
 
 -----------------------------------
 /////////CRIANDO FORMULARIOS\\\\\\\\\
