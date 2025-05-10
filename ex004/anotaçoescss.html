@@ -577,8 +577,6 @@ CSS
         }
     </style>
 
-
-
 HTML
 <table>
     <caption>
@@ -678,12 +676,38 @@ Capítulo 21 Aula 08 – Mesclagem de células
     </table>
 </body>
 ------------------------------------------
+Capítulo 21 Aula 11 – Escopos de grupo
 
+scope="col, colgroup, row, rowgroup"
 
+colu= coluna
+colgroup= grupo de colunas
+row=linha
+rowgroup=grupo de linhas
+----------------------------------
+Capítulo 21 Aula 13 – Agrupando Colunas com colgroup
 
+Organizarmos algo por coluna, exemplo background-color
 
+desafio feito para melhor entendimento no arquivo d014, des_cap21a12.html
 
+<colgroup>
+            <col class="area">
+            <col class="disc">
+            <col class="notas" span="2">
+            <col class="medias">
+        </colgroup>
+        <tr>
+            <th scope="col" rowspan="2">Área</th>
 
+            <th scope="col" rowspan="2">Disciplinas</th>
+
+            <th scope="col" colspan="2">Notas</th>
+
+            <th scope="col" rowspan="2">Média</th>
+
+        </tr>
+    </colgroup>
 
 
 
