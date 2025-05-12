@@ -49,8 +49,16 @@ Ex: box-shadow: 5px 5px 5px #2B49F9;
 FONT: font-style, font-weight, font-size, font-family;
 Ex: 
 font:  bold 2em arial ;(peso, tamanho, fonte)
+
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ------------------------------------
-///////////COMO ADICIONAR FONTES AO CODIGO: CAP 14 AULA 06\\\\\\\\\\\\\\
+
+//////////////////////////////////////////////////////////////
+                       FONTES
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+///////COMO ADICIONAR FONTES AO CODIGO: CAP 14 AULA 06\\\\\\\\
+
 1) vá até o google fontes, procure a fonte que desejar(ex:work sans).
 2) em seguida copie o codigo da fonte em css e cole entre o codigo style, e logo depois, insira a mesmo nome da fonte onde deseja editar.
 Ex: @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -58,7 +66,8 @@ h2 {
     font-family: Bebas Neue;
 }
 ------------------------------------
-/////////////BAIXAR FONTES\\\\\\\\\\\ ex:dafontes
+/////////////BAIXAR FONTES\\\\\\\\\\\ 
+ex:dafontes
 1) pesquise no google dafontes, baixe a fonte da letra que desejar.
 2) colocar o arquivo baixado em uma pasta, pra ficar mais organizado.
 
@@ -105,6 +114,11 @@ line-height: 1.5em;(espaçamento entre linhas)
 ------------------------------------
 Display: inline-block(faz com que as caixas e elementos fiquem em linha)
 Display: block (faz com que as caixas e elementos fiquem uma em cada linha, quebrando o texto)
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                       ID , CLASS
+//////////////////////////////////////////////////////////////
 
 ////////////CAP 15 AULA 01 \\\\\\\\\\
 ID COM CSS, aula de identificadores
@@ -135,7 +149,6 @@ Id é personalização individual.
 Para personalizar várias tags com a mesma edição usa-se class. 
 Ex:
 <h2 class="basico">HTML Basico</h2>
-
 
 .basico{
     background-color: rgb(187, 255, 0);
@@ -245,7 +258,14 @@ MODELO DE CAIXAS NA PRATICA
 Para praticar use o devtools.
 CNTRL SHIFT I
 -----------------------------------
+
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+
+
 //////////////CAP 16 AULA 03\\\\\\
+
 As edições de padding, border, margin são feitas como um relogio, no sentido horário.
 
 shortands de
@@ -310,7 +330,15 @@ ex:
 sempre com -- na frente do nome da variavel,(que no exemplo é "cor").
 
 a variavel facilita no caso de ter que mudar algumas coisas, não precisa ir tag por tag modificar, apenas alterar a variavel correspondente.
------------------------------------
+
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////
+                   RESPONSIVIDADE
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 ////////////CAPITULO 17 AULA 07 – Responsividade para sites\\\\\\\\\\
 
  Pode colocar no body, ou main
@@ -339,22 +367,8 @@ Para quebrar as imagens, use source media dentro da tag picture:
 
                 <img src="imagens/irina-blok.jpg" alt="Criadora ">
             </picture>
-
------------------------------------
-/////////CAPITULO 17 AULA 11 – Rodapé, conteúdo periférico e links\\\\\\\\\\\\\
-
-list-style-position: inside;(codigo para colocar listar dentro da margem)
-
-list-style-type: '\2714\00A0'; 
-(para colocar um emoji antes de um caractere ou paragrafo, 2714 é emoji de checado, 00A0 colocar um espaco entre emoji e o proximo caractere)
-
-columns: 2; (quantas colunas voce quer de determinado paragrafo. neste exemplo, esta sendo usado em uma lista nao ordenada)
-
-a.externo::after{
-    content: '\00A0\1F517';
-} (criamos nesse exemplo, uma classe para colocar o emoji de link )
------------------------------------
-///////////CAPITULO 17 AULA 12 Tornando um vídeo responsivo\\\\\\\\\\\\\\\
+-------------------------------------------------------------
+ ///////////CAPITULO 17 AULA 12 Tornando um vídeo responsivo\\\\\\\\\\\\\\\
 
 div.video{
     background-color: var(--cor4);
@@ -373,7 +387,31 @@ height: 90% ;
 }
 
 Para tornar responsivo o video neste exemplo, criamos uma div class="video". 
+-----------------------------------  ----------         
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+
 -----------------------------------
+/////////CAPITULO 17 AULA 11 – Rodapé, conteúdo periférico e links\\\\\\\\\\\\\
+
+list-style-position: inside;(codigo para colocar listar dentro da margem)
+
+list-style-type: '\2714\00A0'; 
+(para colocar um emoji antes de um caractere ou paragrafo, 2714 é emoji de checado, 00A0 colocar um espaco entre emoji e o proximo caractere)
+
+columns: 2; (quantas colunas voce quer de determinado paragrafo. neste exemplo, esta sendo usado em uma lista nao ordenada)
+
+a.externo::after{
+    content: '\00A0\1F517';
+} (criamos nesse exemplo, uma classe para colocar o emoji de link )
+-----------------------------------
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////
+               IMAGENS DE FUNDO , CENTRALIZAÇÃO
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\               
 ///////////////Capítulo 19 Aula 02 – Colocando uma imagem de fundo no seu site\\\\\\\\\\\\
 
 No exemplo abaixo criamos divs, colocamos classes e ids nessas divs.
@@ -430,7 +468,7 @@ color image position repeat size attachment;
 precisa-se de um container e de um conteudo, no caso class.
 ex:
 .container{
-    height: 96vh;(a classe container ocupar toda a tela do pc)
+    height: 96vh;(a classe container vai ocupar toda a tela do pc)
     background-color: blue;
     padding: 10px;
    background-image: url(imagens/target001.png);
@@ -459,7 +497,14 @@ o objeto que vai conter algo, no caso é classe container, será position:relati
 Capítulo 20 Aula 06 – Imagens com efeito Parallax simples
 
 background-attachment: fixed;
--------------------------------------
+
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////
+                         TABELAS
+//////////////////////////////////////////////////////////////
+
 ///////////////// TABELAS \\\\\\\\\\\\\\\\\\\
 Capítulo 21 Aula 02 – Sua primeira tabela em HTML
 
@@ -712,7 +757,14 @@ desafio feito para melhor entendimento no arquivo d014, des_cap21a12.html
 
         </tr>
     </colgroup>
----------------------------------------------
+
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////
+                        IFRAMES
+//////////////////////////////////////////////////////////////
+
 /////////////////// IFRAMES \\\\\\\\\\\\\\\\\\\
 são elementos HTML que permitem incorporar uma página dentro de outra. Eles são muito usados para exibir conteúdos externos, como vídeos do YouTube, mapas do Google Maps ou até mesmo documentos hospedados em outros sites2.
 
@@ -744,13 +796,16 @@ Vale lembrar que o iframe precisa de um nome para que tenha a referencia para on
 (segurança no iframe, sandobox="sandbox" e referrpolicy="no-referrer", maxima proteção)
 (para permitir cadastro de formularios, sandbox="allow-same-origin allow-form allow-scripts")
 
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
 
 
 
+//////////////////////////////////////////////////////////////                        FORMULÁRIOS
+//////////////////////////////////////////////////////////////
 
------------------------------------
 /////////CRIANDO FORMULARIOS\\\\\\\\\
-
+Capítulo 24 Aula 1 – Como criar formulários com HTML5
 
 
 
