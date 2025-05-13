@@ -69,9 +69,40 @@
 
     <input type="radio" name="sexo" id="ifemi">
     <label for="ifemi">feminino</label>
+<br>
+    <input type="color" name="cor" id="icor">
+    <label for="icor"></label>
 </fieldset>
 
+<fieldset>
+    <legend>range</legend>
+    <input type="range" name="num" id="inum"
+    oninput="ival.innerHTML = Number(inum.value)">
+    <output id="ival"></output>
+    <label for="irange"></label>
+    <br>
+
+    <input type="file" name="arquivo" id="iarquivo">
+    <label for="iarquivo">arquivos</  label>
+</fieldset>
+
+
+<p>
+    <label for="iano">em que ano voce nasceu</label>
+    <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calcIdade()">
+</p>
+<p>
+    <label for="iidade">sua idade é:</label>
+    <output id="iidade">0</output>
+</p>
     </form>
+
+<script>
+    function calcIdade() {
+        let atual = new Date().getFullYear()
+        iidade.innerHTML = Number(atual) - Number(iano.value)
+    }
+</script>
 
 
 </body>

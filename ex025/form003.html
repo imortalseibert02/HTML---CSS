@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+        <h1>exemplo de formulario</h1>
+
+        <label for="iest">Estado</label>
+
+        <select name="estado" id="iest">
+
+            <option value="" selected>---escolha---</option>
+            <optgroup label="regiao sudeste">
+                <option value="RJ">rio de Janeiro </option>
+                <option value="SP">sao paulo</option>
+                <option value="ES">espirito santo</option>
+            </optgroup>
+
+            <optgroup label="regiao Sul">
+                <option value="RS">rio grande</option>
+                <option value="SC">santa catarina</option>
+                <option value="PR">parana</option>
+            </optgroup>
+
+        </select>
+
+        <br>
+        <br>
+
+        <label for="iprof">profissao</label>
+        <input type="text" name="prof" id="iprof" list="listprof">
+
+        <datalist id="listprof">
+            <option>Desenvolvedor</option>
+            <option>professor</option>
+            <option>pintor</option>
+            <option>atleta</option>
+
+        </datalist>
+
+
+        <p>
+            <label for="imsg"></label>
+            <textarea name="msg" id="imsg" cols="30" rows="10">Escreva aqui...</textarea>
+        </p>
+
+        <p>
+            <label for="in1">numero 1</label>
+            <input type="number" name="n1" id="in1" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">numero 2</label>
+            <input type="number" name="n2" id="in2" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="isoma">soma</label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+
+        <p><input type="submit" value="Enviar"></p>
+        <p><input type="reset" value="Limpar"></p>
+
+
+
+
+        
+    </form>
+</body>
+
+</html>
