@@ -469,9 +469,15 @@ background-position: top, right, bottom, left;
 ------------- ---------
 ////////Capítulo 19 Aula 05 – Mudando o tamanho da imagem de fundo do site\\\\\\\\\\
 
-background-size: auto;
-background-size: cover;
-background-size: contain;
+background-size: auto; (Mantém o tamanho original da imagem de fundo, sem nenhum redimensionamento.)
+background-size: cover; (Redimensiona a imagem de fundo para que ela cubra completamente toda a área do elemento.)
+background-size: contain; (Redimensiona a imagem de fundo para que ela caiba integralmente dentro do elemento.)
+
+(auto: Exibe a imagem em seu tamanho natural.
+
+cover: Expande a imagem para cobrir completamente o elemento, mesmo que isso signifique cortar partes dela.
+
+contain: Ajusta a imagem para que ela seja totalmente exibida dentro do elemento, podendo deixar espaços vazios se as proporções não coincidirem.)
 ------------------------------------
 ////////////Capítulo 19 Aula 06 – background-attachment e shorthand\\\\\\\\\\\\\
 
@@ -931,32 +937,6 @@ Capítulo 24 Aula 1 – Como criar formulários com HTML5
 </script>
     </form>
 </body>
-//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//////////////////////////////////////////////////////////////
-
-
-
-//////////////////////////////////////////////////////////////                        MEDIA QUERI
-//////////////////////////////////////////////////////////////
-
-Capítulo 25 Aula 01 – O que são Media Queries em CSS
-
-Media Query é um recurso do CSS que permite adaptar o layout de um site para diferentes tamanhos de tela e dispositivos.
-
-Capítulo 25 Aula 02 – Criando um site com versão para impressora
-(um exemplo dessa aula esta na pasta mq001).
-
-Media Features são propriedades dentro das Media Queries que permitem aplicar estilos específicos com base em características do dispositivo ou navegador. Elas ajudam a criar layouts responsivos e adaptar o design conforme diferentes condições. Ex: tamanho da tela.
-
-
-
-
-
-
-
-
-
-
 
 
 --------------
@@ -1030,6 +1010,79 @@ Media Features são propriedades dentro das Media Queries que permitem aplicar e
 
     </form>
 </body>
+//////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////                        MEDIA QUERI
+//////////////////////////////////////////////////////////////
+
+Capítulo 25 Aula 01 – O que são Media Queries em CSS
+
+Media Query é um recurso do CSS que permite adaptar o layout de um site para diferentes tamanhos de tela e dispositivos.
+
+Capítulo 25 Aula 02 – Criando um site com versão para impressora
+(um exemplo dessa aula esta na pasta mq001).
+
+Media Features são propriedades dentro das Media Queries que permitem aplicar estilos específicos com base em características do dispositivo ou navegador. Elas ajudam a criar layouts responsivos e adaptar o design conforme diferentes condições. Ex: tamanho da tela.
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queri</title>
+
+<link rel="stylesheet" href="estilos/style.css" media="all">
+<link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+</head>        (um estilo css para cada dispositivo)
+<body>
+    <h1>mude a orientação do seu dispositivo </h1>
+</body>
+</html>        (UM ESTILO CSS PARA CADA LAYOUT DE DISPOSITIVOS)
+
+CSS
+@charset "UTF-8";
+/* configuraçoes gerais*/
+*{margin:0px ;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;}
+
+html, body{width: 100vw;
+          height: 100vh;
+          background-color: rgb(43, 0, 255);
+          background-size: contain;
+          background-repeat: no-repeat;}
+
+h1{ color: white;
+    text-shadow: 2px 2px 0px black;
+    padding: 10px;}
+
+CSS RETRATO
+@charset "UTF-8";
+/* aparelho em pé(portrait) */
+body{
+background-image: url(../imagens/cev-portrait.jpg);
+background-position: center bottom;
+}
+
+CSS PAISAGEM
+@charset "UTF-8";
+/* aparelho deitado(lanscape) */
+body{
+background-image: url(../imagens/cev-landscape.jpg);
+background-position: left bottom;
+}
+-----------------------------
+
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //////////////////////////////////////////////////////////////
 
