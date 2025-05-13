@@ -807,6 +807,80 @@ Vale lembrar que o iframe precisa de um nome para que tenha a referencia para on
 /////////CRIANDO FORMULARIOS\\\\\\\\\
 Capítulo 24 Aula 1 – Como criar formulários com HTML5
 
+<fieldset> coloque o formulario aqui </fieldset>(agrupar campos do formulario, cria uma borda em volta do formulario)
+
+<legend>Dados Pessoais</legend>(legend escreve algo na linha do fieldset)
+
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+        <fieldset>
+
+            <legend>Dados Pessoais</legend>
+
+            <p><label for="iusu">Usuario</label>
+                <input type="text" name="usu" id="iusu" minlength="5" maxlength="10" size="18" placeholder="Usuário...">
+            </p>
+
+            <p><label for="iemail">Email</label>
+                <input type="email" name="emil" id="iemail">
+            </p>
+
+            <p><label for="isenha">Senha</label>
+                <input type="password" name="Senha" id="isenha" required>
+            </p>
+
+            <p><label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" minl="0" max="10" step="0.01">
+            </p>
+
+            <p><label for="imes">Periodo letivo</label>
+                <input type="month" name="mes" id="imes">
+            </p>
+
+            <p><label for="idia">dia da prova</label>
+                <input type="date" name="dia" id="idia">
+            </p>
+
+            <p><label for="ihora">hora da prova</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+
+            <p><input type="submit" value="Enviar"></p>
+            <p><input type="reset" value="Limpar"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>check box</legend>
+            <input type="checkbox" name="futebol " id="ifutebol"><label for="ifutebol">futebol</label><br> 
+
+            <input type="checkbox" name="basquete" id="ibasquete"><label for="ibasquete">basquete</label><br> 
+
+            <input type="checkbox" name="natação" id="inatação"><label for="inatação">natação</label><br> 
+
+            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">volei</label><br> 
+
+            <input type="checkbox" name="corrida" id="icorrida"><label for="icorrida">corrida</label><br> 
+
+            <input type="checkbox" name="handbol" id="ihandbol"><label for="ihandbol">handbol</label><br> 
+        </fieldset>
+(no input checkbox, é preciso colocar o label for" " com o mesmo nome do name do checkbox, para que não precise clicar só na caixinha do checkbox para marcar a opção)
+
+
+<fieldset>
+    <legend>sexo</legend>
+
+    <input type="radio" name="sexo" id="imasc">
+    <label for="imasc">masculino</label>
+
+    <input type="radio" name="sexo" id="ifemi">
+    <label for="ifemi">feminino</label>
+</fieldset>
+(para input de radio, precisa-se colocar o mesmo name, para que seja marcada apenas uma opção)
+    </form>
+
+
+</body>
 
 
 
