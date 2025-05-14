@@ -1026,9 +1026,28 @@ Capítulo 25 Aula 02 – Criando um site com versão para impressora
 (um exemplo dessa aula esta na pasta mq001).
 
 Media Features são propriedades dentro das Media Queries que permitem aplicar estilos específicos com base em características do dispositivo ou navegador. Elas ajudam a criar layouts responsivos e adaptar o design conforme diferentes condições. Ex: tamanho da tela.
-------------------------------
-(UM ESTILO CSS PARA CADA LAYOUT DE DISPOSITIVOS)
-(UM ARQUIVO CSS PARA CADA LAYOUT)
+
+Os media queries utilizam diferentes tipos de media para definir estilos dependendo do ambiente de exibição. Aqui estão os mais comuns:
+
+All – Aplica os estilos a todas as mídias, independentemente do tipo de dispositivo.
+
+Screen – Indica que os estilos se aplicam a telas de dispositivos como monitores, celulares e tablets.
+
+Print – Usado para definir estilos específicos para quando o conteúdo for impresso.
+
+Speech – Destinado a sintetizadores de voz que leem o conteúdo em voz alta.
+
+/* TYPICAL DEVICE BREAKINGPOINTS(TAMANHO DAS TELAS)
+pequenas telas: até 600px
+celular:        de 600px até 768px
+tablet:         de 768px até 992px
+desktop:        de 992 px até 1200px
+grandes telas:  acima de 1200px
+*/
+
+
+-----------------------------------------
+(UM ESTILO CSS PARA CADA LAYOUT DE DISPOSITIVOS, UM ARQUIVO CSS PARA CADA LAYOUT, USANDO CSS EXTERNO)
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -1081,7 +1100,7 @@ background-position: left bottom;
 -----------------------------
 
 -------------------------------------------------
-(O MESMO EXERCICIO CSS, SÓ QUE JUNTO COM HTML)
+(O MESMO EXERCICIO CSS, SÓ QUE JUNTO COM O DOCUMENTO HTML)
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -1092,7 +1111,7 @@ background-position: left bottom;
     <title>media queri</title>
 
     <style>
-        /* declarações gerais */
+/* declarações gerais */
         * {
             margin: 0px;
             padding: 0px;
@@ -1113,8 +1132,8 @@ background-position: left bottom;
             text-shadow: 2px 2px 0px black;
             padding: 10px;
         }
-
-        /* declarações retrato*/
+--------------------------------
+/* declarações retrato*/
         @media screen and (orientation: portrait) {
             body {
                 background-image: url(../mq003/imagens/cev-portrait.jpg);
@@ -1122,8 +1141,8 @@ background-position: left bottom;
             }
         }
 
-
-        /* declarações paisagem */
+--------------------------------
+/* declarações paisagem */
         @media screen and (orientation: landscape) {
             body {
                 background-image: url(../mq003/imagens/cev-landscape.jpg);
@@ -1169,7 +1188,7 @@ background-position: left bottom;
         padding: 10px;
     }
 }
-
+---------------------------------
 /* declarações retrato*/
 @media screen and (orientation: portrait) {
     body {
@@ -1177,8 +1196,7 @@ background-position: left bottom;
         background-position: center bottom;
     }
 }
-
-
+---------------------------------
 /* declarações paisagem */
 @media screen and (orientation: landscape) {
     body {
@@ -1187,9 +1205,164 @@ background-position: left bottom;
     }
 }
 -----------------------------------
+///////////////////////////////////////////////////////
+
+PROJETO COM MEDIA QUERY, arquivo mq004
+(DIFERENTES LAYOUTS EM VARIOS ARQUIVOS CSS)
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    ---(VARIOS ARQUIVOS CSS)---
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+
+    <link rel="stylesheet" href="estilos/media-query.css">
+
+</head>
+
+<body>
+    <main> ---(INDEX COM VÁRIAS IMAGENS)---
+        <h1>Testando media query</h1>
+        <img id="phone" src="imagens/icon-phone.png" alt="">
+        <img id="tablet" src="imagens/icon-tablet.png" alt="">
+        <img id="print" src="imagens/icon-print.png" alt="">
+        <img id="pc" src="imagens/icon-pc.png" alt="">
+        <img id="tv" src="imagens/icon-tv.png" alt="">
+    </main>
+</body>
+</html>
+
+-----------(ARQUIVO CSS style.css) --------------
+@charset "UTF-8";
+
+/*MOBILE FIRST*/
+(ARQUIVO CSS DO LAYOUT DO PHONE/CELULAR)
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: black url(../imagens/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.764);
+    margin: auto;
+    width: 80vw;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.488);
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+img#phone {display: block;}
+img#tablet {display: none;}
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: none;}
 
 
+-----(ARQUIVO CSS estilos/media-query.css)------ 
+@charset "UTF-8";
 
+(ARQUIVO CSS DO LAYOUT DA IMPRESSÃO, TABLET, DESKTOP, TELAS GRANDES)
+
+/*DEMAIS MIDIAS*/
+
+@media print { /* IMPRESSÃO */
+    *{
+         font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+    background-image: url(../imagens/back-print.jpg); /* desnecessario*/
+}
+
+    main{
+    
+    border: 2px solid black;
+}
+
+    main h1{
+    text-shadow: none;
+}
+    img#print {display: block;}
+    img#tablet {display: none;}
+    img#phone {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    /* TABLET */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+
+    }
+    img#tablet {display: block;}
+
+    img#phone {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    /* DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#pc{display: block;}
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#tv{display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* GRANDES TELAS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#tv{display: block;}
+
+    img#phone{display:none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: none;}
+}
 
 
 
