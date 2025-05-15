@@ -1498,8 +1498,274 @@ article p {
     margin-bottom: 20px;
     text-indent: 20px;
 }
+===================================================
 
+PROJETO LOGIN (MODULO 4 CAP 26)
+(QUALQUER DUVIDA SOBRE O PROJETO, ACESSE O GITHUB DO IMORTAL, OU ACESSE OS ARQUIVOS LOCAIS DO PC)
 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos/style.css"> (CSS PRINCIPAL NO CELULAR, MOBILE FIRST)
+
+    <link rel="stylesheet" href="estilos/media-query.css"> (CSS DOS DEMAIS LAYOUTS DE TELA  )
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+(LINK DOS ICONS OU EMOJIS DO GOOGLE)
+
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section id="login">
+
+            <div id="imagem"></div>
+
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja Bem-vindo novamente, Faça seu login para acessar sua conta e poder fazer as configurações no seu
+                    ambiente.</p>
+                <br>
+                <form action="login.php" method="post" autocomplete="on"> (FORMULÁRIO)
+
+                    <div class="campo">
+
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                        <input type="email" name="login" id="ilogin" placeholder="Seu email..." autocomplete="email"
+                            required maxlength="30">
+                        <label for="ilogin">Login</label>
+                    </div>
+
+                    <br>
+
+                    <div class="campo">
+                        <span class="material-symbols-outlined">
+                            vpn_key
+                        </span>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha..."
+                            autocomplete="current-password" required minlength="5">
+                        <label for="isenha">Senha</label>
+                    </div>
+
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esqueci a senha <span class="material-symbols-outlined">
+                            mail
+                        </span> </a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+----------(CSS style.css (CSS PRINCIPAL) )--------------
+
+@charset "UTF-8";
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: #ffe1c6;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    width: 300px;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.31);
+
+    transition: width.3s, height .3s;
+    transition-timing-function: ease;
+}
+
+section#login>div#imagem {
+    display: block;
+    background-image: url(../imagens/pexels-jordicosta-31469971.jpg);
+    height: 200px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#formulario {
+    padding: 10px;
+}
+
+form>div.campo {
+    background-color: #ffe1c6;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #ffe1c6;
+}
+
+div.campo>label {
+    display: none;
+}
+
+div.campo>span {
+    color: #7a5b41;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo>input {
+    font-size: 1em;
+    background-color: #ffffff;
+    height: 100%;
+    width: calc(100% - 44px);
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-11px);
+}
+
+section#login>div#formulario>h1 {
+    display: block;
+    text-align: center;
+}
+
+form>input[type=submit] {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1em;
+    height: 40px;
+    background-color: #ffe1c6;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #fab881;
+}
+
+form>input[type=submit]:hover {
+    background-color: #fab881;
+}
+
+form>a.botao {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    height: 40px;
+    background-color: blanchedalmond;
+    color: black;
+    border: 1px solid #fab881;
+    border-radius: 5px;
+    text-decoration: none;
+    }
+
+form>a.botao:hover {
+    background-color: #fab881;
+}
+
+---------(CSS media-query (CSS DOS DEMAIS LAYOUTS DE TELA ) )--------------
+
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    /* TABLETS*/
+    body {
+        background-image: linear-gradient(to top, #ffe1c6, #fab881);
+    }
+
+    section#login {
+        height: 350px;
+        width: 80vw;
+    }
+
+    section#login>div#imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login>div#formulario {
+        float: right;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width :992px) {
+
+    /* DESKTOP*/
+    body {
+        background-image: linear-gradient(to top, #ffe1c6, #fab881);
+    }
+
+    section#login {
+        width: 950px;
+        height: 400px;
+    }
+
+    section#login>div#imagem {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    div#formulario>h1 {
+        font-size: 2em;
+    }
+
+    section#login>div#formulario {
+        float: right;
+        width: 50%;
+        font-size: 1.2em;
+    }
+
+    div.campo>input {
+        font-size: 1em;
+        background-color: #ffffff;
+        height: 100%;
+        width: calc(100% - 44px);
+        border-radius: 5px;
+        padding: 4px;
+        transform: translate(45px, -48px);
+    }
+
+    div.campo>span {
+        color: #7a5b41;
+        font-size: 2em;
+        width: 40px;
+        padding: 5px;
+        transform: translateY(-5px);
+    }
+}
+----------------(FIM DO PROJETO LOGIN)--------------------
 
 //////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //////////////////////////////////////////////////////////////
