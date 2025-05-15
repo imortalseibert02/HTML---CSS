@@ -12,6 +12,7 @@ body {
 
 header {
     background-color: rgb(64, 172, 255);
+    width: 100vw;
 }
 
 h1 {
