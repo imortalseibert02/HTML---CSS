@@ -597,156 +597,17 @@ vertical-align: middle; (alinhamento vertical)
 -------------------------------------------
 Capítulo 21 Aula 04 – Aprendendo a trabalhar com tabelas grandes
 
-CSS
-<style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+(EXERCICIO 023, TABELA001.HTML)
+<!-- [tabelas.png] -->
 
-        table {
-
-            width: 500px;
-            border-collapse: collapse;
-        }
-
-        caption{
-            padding: 10px;
-            font-size: 1.5em;
-            background-color: crimson;
-            color: white;
-        }
-
-        td,
-        th {
-            padding: 8px;
-            vertical-align: middle;
-            border: 1px solid black;
-
-        }
-
-        thead,
-        tfoot {
-            padding: 10px;
-            border: 1px solid black;
-            background-color: cadetblue;
-            color: white;
-            text-align: center;
-        }
-
-        thead > tr > th{
-            position: sticky;
-            top: -1px;
-            background-color: cadetblue;
-        } (cabeçalho fixo)
-
-        tbody > tr:nth-child(odd){
-        background-color: rgb(228, 212, 192);
-        } (efeito zebrado)
-
-        .num {
-            text-align: right;
-        }
-    </style>
-
-HTML
-<table>
-    <caption>
-        População das unidades federativas
-    </caption>
-        <thead>
-            <tr>
-                <th>Estado</th>
-                <th>População</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>São Paulo</td>
-                <td class="num">45.900.000</td>
-            </tr>
-            <tr>
-                <td>Minas Gerais</td>
-                <td class="num">21.100.000</td>
-            </tr>
-            <tr>
-                <td>Rio de Janeiro</td>
-                <td class="num">17.200.000</td>
-            </tr>
-            <tr>
-                <td>Bahia</td>
-                <td class="num">14.800.000</td>
-            </tr>
-            <tr>
-                <td>Parana</td>
-                <td class="num">11.400.000</td>
-            </tr>
-            <tr>
-                <td>Rio Grande do Sul</td>
-                <td class="num">11.300.000</td>
-            </tr>
-        </tbody>
-
-        <tfoot>
-            <tr>
-                <td>
-                    Total de Habitantes
-                </td>
-                <td>
-                    121.700.000
-                </td>
-            </tr>
-        </tfoot>
-    </table>
--------------------------------------
+<!-- -------------------------------------
 Capítulo 21 Aula 08 – Mesclagem de células
 
-<title>mesclagem tabelas</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+(EX023, TABELA003.HTML)
+<!-- [mesclagem_de_tabelas.png] -->
 
-        }
 
-        table {
-            border-collapse: collapse;
-            width: 300px;
-
-        }
-
-        tr,
-        td {
-            text-align: center;
-            padding: 8px;
-            border: 1px solid black;
-        }
-    </style>
-
-</head>
-
-<body>
-    <table>
-        <tr>
-            <td>A</td>
-            <td colspan="2">B</td>
-        </tr>
-
-        <tr>
-            <td rowspan="3">D</td>
-            <td>E</td>
-            <td rowspan="2">F</td>
-        </tr>
-
-        <tr>
-            <td>H</td>
-        </tr>
-        <tr>
-            <td>K</td>
-            <td>L</td>
-        </tr>
-    </table>
-</body>
-------------------------------------------
+<!--  -------------------------------------
 Capítulo 21 Aula 11 – Escopos de grupo
 
 scope="col, colgroup, row, rowgroup"
@@ -802,16 +663,9 @@ Funciona como uma "janela" dentro da página principal, sem interferir no códig
 
 Pode ser configurado com atributos como width, height, border e scrolling.
 
-<iframe src="../abnh/index.html" name="frame" frameborder="0"> </iframe>
-
-Como colocar a imagem de um link dentro do iframe?
-<ul>
-    <li><a href="../gremio/gremio.html" target="frame">gremio</a></li>    
-    <li><a href="../d014/des_cap21a12.html" target="frame">tabelas</a></li>
-    <li><a href="../ex023/tabela003.html" target="frame">tabela03</a></li>
-</ul>
-
-    <iframe src="" name="frame" frameborder="0"></iframe>
+(IFRAME001.HTML)
+<!-- [iframe.png] -->
+<!--
 
 (ao clicar em um desses links acima, a pagina sera mostrada dentro do iframe. 
 Vale lembrar que o iframe precisa de um nome para que tenha a referencia para onde os links vão direcionar, e também deve-se colocar o endereço do iframe nos links, ex: target="frame")
@@ -836,182 +690,15 @@ Capítulo 24 Aula 1 – Como criar formulários com HTML5
 
 <legend>Dados Pessoais</legend>(legend escreve algo na linha do fieldset)
 
-<body>
-    <form action="cadastro.php" method="post" autocomplete="on">
+(FORM002.HTML)
+<!-- [tipos_de_formularios.png] --> 
+<!--
 
-        <fieldset>
-
-            <legend>Dados Pessoais</legend>
-
-            <p><label for="iusu"> Usuario </label>
-                <input type="text" name="usu" id="iusu" minlength="5" maxlength="10" size="18" placeholder="Usuário...">
-            </p>
-
-            <p><label for="iemail"> Email </label>
-                <input type="email" name="emil" id="iemail">
-            </p>
-
-            <p><label for="isenha">Senha</label>
-                <input type="password" name="Senha" id="isenha" required>
-            </p>
-
-            <p><label for="imedia"> Média </label>
-                <input type="number" name="media" id="imedia" minl="0" max="10" step="0.01">
-            </p>
-
-            <p><label for="imes"> Periodo letivo </label>
-                <input type="month" name="mes" id="imes">
-            </p>
-
-            <p><label for="idia"> dia da prova </label>
-                <input type="date" name="dia" id="idia">
-            </p>
-
-            <p><label for="ihora"> hora da prova </label>
-                <input type="time" name="hora" id="ihora">
-            </p>
-
-            <p><input type="submit" value="Enviar"></p>
-            <p><input type="reset" value="Limpar"></p>
-        </fieldset>
-======================================================
-        <fieldset>
-            <legend>check box</legend>
-            <input type="checkbox" name="futebol " id="ifutebol"><label for="ifutebol">futebol</label><br> 
-
-            <input type="checkbox" name="basquete" id="ibasquete"><label for="ibasquete">basquete</label><br> 
-
-            <input type="checkbox" name="natação" id="inatação"><label for="inatação">natação</label><br> 
-
-            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">volei</label><br> 
-
-            <input type="checkbox" name="corrida" id="icorrida"><label for="icorrida">corrida</label><br> 
-
-            <input type="checkbox" name="handbol" id="ihandbol"><label for="ihandbol">handbol</label><br> 
-     </fieldset>
-(no input checkbox, é preciso colocar o label for" " com o mesmo nome do name do checkbox, para que não precise clicar só na caixinha do checkbox para marcar a opção)
-
-======================================================
-<fieldset>
-    <legend>sexo</legend>
-
-    <input type="radio" name="sexo" id="imasc">
-    <label for="imasc">masculino</label>
-
-    <input type="radio" name="sexo" id="ifemi">
-    <label for="ifemi">feminino</label>
-</fieldset>
-(para input de radio, precisa-se colocar o mesmo name, para que seja marcada apenas uma opção)
-======================================================
-<br>
-    <input type="color" name="cor" id="icor">
-    <label for="icor"></label>
-</fieldset>
-======================================================
-<fieldset>
-     <input type="range" name="num" id="inum"
-    oninput="ival.innerHTML = Number(inum.value)">
-
-    <output id="ival"></output>
-
-    <label for="irange"></label>
- ======================================================
-    <input type="file" name="arquivo" id="iarquivo">
-    <label for="iarquivo">arquivos</  label>
-</fieldset>
-========================================================
-
-<p> (calcular idade usando formulario)
-    <label for="iano">em que ano voce nasceu</label>
-    <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calcIdade()">
-</p>
-<p>
-    <label for="iidade">sua idade é:</label>
-    <output id="iidade">0</output>
-</p>
-    </form>
-
-<script>
-    function calcIdade() {
-        let atual = new Date().getFullYear()
-        iidade.innerHTML = Number(atual) - Number(iano.value)
-    }
-</script>
-    </form>
-</body>
+(FORM003.HTML)
+<!-- [tipos_de_formularios2.png] -->
+<!--
 
 
---------------
-<body>
-<form action="cadastro.php" method="post" autocomplete="on">
-
-<h1>exemplo de formulario</h1>
-
-    <label for="iest">Estado</label>
-
-    <select name="estado" id="iest">
-
-    <option value="" selected>---escolha---</option>
-
-        <optgroup label="regiao sudeste">
-            <option value="RJ">rio de Janeiro </option>
-            <option value="SP">sao paulo</option>
-            <option value="ES">espirito santo</option>
-        </optgroup>
-
-        <optgroup label="regiao Sul">
-            <option value="RS">rio grande</option>
-            <option value="SC">santa catarina</option>
-            <option value="PR">parana</option>
-        </optgroup>
-
-        </select>
-
-        <br>
-        <br>
-======================================================
-        <label for="iprof">profissao</label>
-        <input type="text" name="prof" id="iprof" list="listprof">
-
-    <datalist id="listprof">
-        <option> Desenvolvedor </option>
-        <option> professor </option>
-        <option> pintor </option>
-        <option> atleta </option>
-    </datalist>
-======================================================
-
-<p>
-    <label for="imsg"></label>
-     <textarea name="msg" id="imsg" cols="30" rows="10">Escreva aqui...</textarea>
-</p>(escrever mensagens)
-======================================================
-<p>
-    <label for="in1">numero 1</label>
-     <input type="number" name="n1" id="in1" required
-    oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"> (soma de numeros com formulario, javascript)
- </p>
-<p>
-    <label for="in2">numero 2</label>
-    <input type="number" name="n2" id="in2" required
-     oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
-</p>
-
-<p>
-    <label for="isoma">soma</label>
-    <output name="soma" id="isoma">0</output>
-</p>
-======================================================
-
-
-
-
-
-<p><input type="submit" value="Enviar"></p>
-<p><input type="reset" value="Limpar"></p>
-
-    </form>
-</body>
 //////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //////////////////////////////////////////////////////////////
 
@@ -1768,7 +1455,48 @@ form>a.botao:hover {
 ----------------(FIM DO PROJETO LOGIN)--------------------
 
 //////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 //////////////////////////////////////////////////////////////
+                 FLEX-BOX modulo 5
+//////////////////////////////////////////////////////////////
+a partir do arquivo ex027
+
+////Empacotamento e fluxo no Flexbox CSS\\\\
+
+Flex direction: row (da esquerda pra direita)
+Flex direction: row-reverse (da direita pra esquerda)
+
+Flex direction: column (de cima pra baixo)
+Flex direction: column-reverse (de baixo pra cima)
+
+flex:auto; (o conteudo vai se organizar automaticamente, ocupando todo o espaço do container)
+
+shorthand flex-flow
+(flex-direction + flex-wrap)
+ex: flex-flow: row nowrap
+
+main-axis & cross-axis
+
+(IMAGENS EXPLICATIVAS DE FLEX)
+<!-- [flex-box.jpeg] -->
+
+<!-- [flex_wrap.jpeg] -->
+
+
+<!--
+////////Alinhamento nos eixos Flexbox\\\\\\\\\\\
+
+(justify-content) alinhamento do eixo principal em linha
+<!-- [justify_content.jpeg] -->
+<!--
+
+(justify-content) alinhamento do eixo principal em colunas
+<!-- [justify_content_column.jpeg] -->
+<!--
+
+(align-itens) alinhamento do eixo cross-axis
+são as mesmas propriedades para ambos os alinhamentos
+
 
 
 -------------------------------------
@@ -1839,4 +1567,4 @@ body{(o corpo da pagina sera degrade, neste caso)
 -->
 </body>
 
-</html>
+</html>  -->

@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario</title>
-
+    <title> diferentes tipos de formularios </title>
 </head>
 
 <body>
@@ -13,31 +12,38 @@
 
         <fieldset>
             <legend>Dados Pessoais</legend>
-            <p><label for="iusu">Usuario</label>
+            <p>
+                <label for="iusu">Usuario</label>
                 <input type="text" name="usu" id="iusu" minlength="5" maxlength="10" size="18" placeholder="Usuário...">
             </p>
 
-            <p><label for="iemail">Email</label>
+            <p>
+                <label for="iemail">Email</label>
                 <input type="email" name="emil" id="iemail   ">
             </p>
 
-            <p><label for="isenha">Senha</label>
+            <p>
+                <label for="isenha">Senha</label>
                 <input type="password" name="Senha" id="isenha" required>
             </p>
 
-            <p><label for="imedia">Média</label>
+            <p>
+                <label for="imedia">Média</label>
                 <input type="number" name="media" id="imedia" minl="0" max="10" step="0.01">
             </p>
 
-            <p><label for="imes">Periodo letivo</label>
+            <p>
+                <label for="imes">Periodo letivo</label>
                 <input type="month" name="mes" id="imes">
             </p>
 
-            <p><label for="idia">dia da prova</label>
+            <p>
+                <label for="idia">dia da prova</label>
                 <input type="date" name="dia" id="idia">
             </p>
 
-            <p><label for="ihora">hora da prova</label>
+            <p>
+                <label for="ihora">hora da prova</label>
                 <input type="time" name="hora" id="ihora">
             </p>
 
@@ -47,64 +53,63 @@
 
         <fieldset>
             <legend>check box</legend>
-            <input type="checkbox" name="futebol " id="ifutebol"><label for="ifutebol">futebol</label><br> 
+            <input type="checkbox" name="futebol " id="ifutebol"><label for="ifutebol">futebol</label><br>
 
-            <input type="checkbox" name="basquete" id="ibasquete"><label for="ibasquete">basquete</label><br> 
+            <input type="checkbox" name="basquete" id="ibasquete"><label for="ibasquete">basquete</label><br>
 
-            <input type="checkbox" name="natação" id="inatação"><label for="inatação">natação</label><br> 
+            <input type="checkbox" name="natação" id="inatação"><label for="inatação">natação</label><br>
 
-            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">volei</label><br> 
+            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">volei</label><br>
 
-            <input type="checkbox" name="corrida" id="icorrida"><label for="icorrida">corrida</label><br> 
+            <input type="checkbox" name="corrida" id="icorrida"><label for="icorrida">corrida</label><br>
 
-            <input type="checkbox" name="handbol" id="ihandbol"><label for="ihandbol">handbol</label><br> 
-
-
+            <input type="checkbox" name="handbol" id="ihandbol"><label for="ihandbol">handbol</label><br>
         </fieldset>
 
-<fieldset>
-    <legend>sexo</legend>
-    <input type="radio" name="sexo" id="imasc">
-<label for="imasc">masculino</label>
+        <fieldset>
+            <legend>sexo</legend>
 
-    <input type="radio" name="sexo" id="ifemi">
-    <label for="ifemi">feminino</label>
-<br>
-    <input type="color" name="cor" id="icor">
-    <label for="icor"></label>
-</fieldset>
+            <input type="radio" name="sexo" id="imasc">
+            <label for="imasc">masculino</label>
 
-<fieldset>
-    <legend>range</legend>
-    <input type="range" name="num" id="inum"
-    oninput="ival.innerHTML = Number(inum.value)">
-    <output id="ival"></output>
-    <label for="irange"></label>
-    <br>
+            <input type="radio" name="sexo" id="ifemi">
+            <label for="ifemi">feminino</label>
 
-    <input type="file" name="arquivo" id="iarquivo">
-    <label for="iarquivo">arquivos</  label>
-</fieldset>
+            <br>
+
+            <input type="color" name="cor" id="icor">
+            <label for="icor"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>range</legend>
+            <input type="range" name="num" id="inum" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival"></output>
+            <label for="irange"></label>
+            
+            <br>
+
+            <input type="file" name="arquivo" id="iarquivo">
+            <label for="iarquivo">arquivos</ label>
+        </fieldset>
 
 
-<p>
-    <label for="iano">em que ano voce nasceu</label>
-    <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calcIdade()">
-</p>
-<p>
-    <label for="iidade">sua idade é:</label>
-    <output id="iidade">0</output>
-</p>
+        <p>
+            <label for="iano">em que ano voce nasceu</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="iidade">sua idade é:</label>
+            <output id="iidade">0</output>
+        </p>
     </form>
 
-<script>
-    function calcIdade() {
-        let atual = new Date().getFullYear()
-        iidade.innerHTML = Number(atual) - Number(iano.value)
-    }
-</script>
-
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
 
 </body>
-
 </html>
