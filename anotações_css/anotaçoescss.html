@@ -1486,17 +1486,63 @@ main-axis & cross-axis
 <!--
 ////////Alinhamento nos eixos Flexbox\\\\\\\\\\\
 
-(justify-content) alinhamento do eixo principal em linha
+(JUSTIFY-CONTENT) alinhamento do eixo principal em linha
 <!-- [justify_content.jpeg] -->
-<!--
+<!--justify-content (Alinhamento no eixo principal)
+
+Essa propriedade controla o alinhamento dos itens ao longo do eixo principal (horizontal, se flex-direction: row; vertical, se flex-direction: column).
+
+Valores comuns:
+
+flex-start → Alinha os itens no início do contêiner.
+
+flex-end → Alinha os itens no final do contêiner.
+
+center → Centraliza os itens.
+
+space-between → Distribui os itens com espaço entre eles.
+
+space-around → Adiciona espaço antes, entre e depois dos itens.
+
+space-evenly → Distribui os itens com espaços iguais.
 
 (justify-content) alinhamento do eixo principal em colunas
 <!-- [justify_content_column.jpeg] -->
 <!--
-
-(align-itens) alinhamento do eixo cross-axis
+---------------------------------------
+(ALIGN-ITENS) alinhamento do eixo transversal (cross-axis)
 são as mesmas propriedades para ambos os alinhamentos
 
+Essa propriedade define como os itens são alinhados ao longo do eixo cruzado (vertical, se flex-direction: row; horizontal, se flex-direction: column).
+
+Valores comuns:
+
+flex-start → Alinha os itens no topo.
+
+flex-end → Alinha os itens na base.
+
+center → Centraliza os itens verticalmente.
+
+stretch → Estica os itens para ocupar toda a altura disponível.
+
+baseline → Alinha os itens pela linha de base do texto.
+------------------------------------
+(ALIGN-CONTENT) 
+Essa propriedade só tem efeito quando os itens ocupam mais de uma linha (flex-wrap: wrap). Ela controla o espaçamento entre as linhas no eixo cruzado.
+
+Valores comuns:
+
+flex-start → Agrupa as linhas no topo.
+
+flex-end → Agrupa as linhas na base.
+
+center → Centraliza as linhas.
+
+space-between → Distribui as linhas com espaço entre elas.
+
+space-around → Adiciona espaço antes, entre e depois das linhas.
+
+stretch → Estica as linhas para ocupar todo o espaço disponível.
 
 
 -------------------------------------
