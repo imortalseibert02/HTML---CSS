@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex box 2</title>
+    <title>Flex box justify-content</title>
     <style>
         div.container {
             display: flex;
             flex-flow: row wrap;
-           justify-content: center;
-            height: 200px;
+           justify-content: center;   
+            /* alinhamento do eixo principlal */
+            height: 400px;
+             align-items: center; /*alinhamento do eixo transversal */
             background-color: rgb(210, 210, 255);
+             align-content:center ;  /*Ela controla o espaçamento entre as linhas no eixo cruzado. */
         }
 
         div.item {
             padding: 45px;
-            text-align: center;
+            
             border: 1px solid black;
             background-color: rgb(255, 216, 166);
         }
