@@ -27,12 +27,12 @@ header {
 }
 
 header>h1 {
-    
+
     flex: 0 0 200px;
 }
 
 header>nav {
-    
+
 
     display: flex;
     flex-flow: row wrap;
@@ -75,15 +75,17 @@ main>h2 {
         background-color: #160B40;
     }
 
-    header, header>nav{
+    header,
+    header>nav {
         flex-flow: column nowrap;
 
     }
-header>h1{
-    flex-basis:50px;
-}
 
-header>nav>a{
-    width: 90vw;
-}
+    header>h1 {
+        flex-basis: 50px;
+    }
+
+    header>nav>a {
+        width: 90vw;
+    }
 }
