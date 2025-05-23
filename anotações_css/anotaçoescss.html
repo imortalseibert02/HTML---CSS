@@ -1454,6 +1454,11 @@ form>a.botao:hover {
 //////////////////////////////////////////////////////////////
                  FLEX-BOX modulo 5
 //////////////////////////////////////////////////////////////
+(JUSTIFY-CONTENT, ALIGN-ITENS, ALIGN-CONTENT, são para a classe pai, ou container)
+
+(ORDER, ALIGN-SELFBASIS,GROW, SHRINK, são para a classe filho, ou os itens da classe pai)
+
+----------------
 a partir do arquivo ex027
 
 ////Empacotamento e fluxo no Flexbox CSS\\\\
@@ -1585,10 +1590,33 @@ Valores comuns:
 EXEMPLO DE SHRINK E GROW:
 <!-- [flex_shrink_grow.png] -->
  <!--
+--------------------------------------------
+/////////////A propriedade flex\\\\\\\\\\\\\
+
+shothand   flex: grow, shrink, basis;
+EX: flex: 2 0 150px
+
+flex: 0 1 auto (VALORES PADRONIZADOS) OU 
+flex: initial
+
+flex: 0 0 auto (VALORES NÃO FLEXIVEIS) OU
+flex: none
+
+flex: 1 1 auto (MAXIMO DE FLEXIBILIDADE) OU 
+flex:auto
+
+<!-- RESUMO: [shorthand_flex.jpeg] -->
+<!--
 
 
 
- 
+
+
+
+
+
+
+
 -------------------------------------
 CSS IN LINE: funciona, mas não é muito recomendado. Pois pode dar muito trabalho. Porcausa de sua edição em linha de cada codigo.
 Você vai codar o estilo individualmente em cada codigo.
