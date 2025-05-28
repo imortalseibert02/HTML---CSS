@@ -1640,7 +1640,7 @@ Grid Items: Os elementos dentro do container que seguem a estrutura da grade.
 
 Grid Tracks: As linhas e colunas que formam a grade.
 
-Grid Gaps: Espaços entre as linhas e colunas (gap: 20px;).
+ Gaps: Espaços entre as linhas e colunas (gap: 20px;).
 
 Grid Areas: Áreas nomeadas dentro da grade para organização (grid-template-areas).
 
@@ -1648,13 +1648,28 @@ Grid Areas: Áreas nomeadas dentro da grade para organização (grid-template-ar
 grid-template-rows: tamanho das linhas
 grid-template-columns: tamanho das colunas
 
+ex:
+grid-template-columns: auto 100px 200px;
+(3 valores equivale a 3 colunas, com seus devidos tamanhos de coluna, tambem serve para as linhas)
+
+grid-template-rows: auto 100px 200px;
+(a quantidade de valores definira quantas colunas e linhas tera.
+)
+
 ex basico:
 <!-- [grid_basico.png] -->
-<!--
+<!-- ---------
 
+<!-- [propriedades_container.jpeg] -->
+<!-- 
 
+(align-itens vai mexer os (itens) na vertical.)
 
+(align-content vai mexer o (grupo de itens) na vertical.)
 
+(justify-itens vai mexer os (itens) na horizontal.)
+
+(justify-content vai mexer o (grupo de itens) na horizontal.) 
  
 
 -------------------------------------
