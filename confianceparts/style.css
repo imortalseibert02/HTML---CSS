@@ -1,0 +1,115 @@
+@charset "UTF08";
+
+/* dispositivo padrao (1250px) */
+
+:root {
+    --corheader1: #FF0000;
+    --cor1: #002856;
+    --cor2:#FFFFFF;
+    --corfooter: #A40E16;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+header{
+    background-color: var(--cor1);
+    color: var(--cor2);
+
+    
+    height: 250px;
+}
+
+header>h5{
+padding: 10px;
+
+    text-align: center;
+    background-color: var(--corheader1);
+}
+
+header>section{
+    padding: 10px;
+margin-bottom: 10px;
+
+    display: grid;
+    grid-template: 1fr / auto 900px auto auto;
+    align-items: center;
+    justify-items: center;
+}
+
+header>section>p,img{
+    padding: 10px;
+    margin: 10px;
+}
+
+header>section>#logoconfiance{
+    transform: translateX(25%);
+}
+
+
+
+header>nav{
+    
+    display: flex;
+}
+
+header>nav>a{
+    color: var(--cor2);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    color: var(--cor2);
+    background-color: var(--corfooter);
+    text-align: center;
+    padding: 30px 100px ;
+    
+}
+
+footer>img{
+    margin: 10px;
+    
+}
+
+footer>a>img{
+    margin: 10px 10px 20px 10px;
+}
+
+footer>div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+footer>div>a{
+    color: var(--cor2);
+    text-decoration: none;
+    padding: 5px;
+}
+
+footer>form{
+    margin: 20px 0px;
+}
+
+footer>form>label>input, button{
+    padding: 15px;
+   
+}
+
+footer>p{
+    padding: 15px;
+}
+
