@@ -1653,8 +1653,19 @@ grid-template-columns: auto 100px 200px;
 (3 valores equivale a 3 colunas, com seus devidos tamanhos de coluna, tambem serve para as linhas)
 
 grid-template-rows: auto 100px 200px;
-(a quantidade de valores definira quantas colunas e linhas tera.
+(a quantidade de valores definira quantas linhas tera.
 )
+--------------------
+GRID-TEMPLATE: linhas / colunas;
+ex:
+grid-template: 100px 100px / auto auto auto;
+(100px são tamanhos de linhas, e o auto é o tamanho das colunas)
+_____________________________________
+| auto  |  100px    |   200px       |           
+|_______|___________|_______________| 2 linhas
+| auto  |  100px    |   200px       | 3 colunas
+|_______|___________|_______________|
+--------------------
 
 ex basico:
 <!-- [grid_basico.png] -->
@@ -1663,14 +1674,44 @@ ex basico:
 <!-- [propriedades_container.jpeg] -->
 <!-- 
 
-(align-itens vai mexer os (itens) na vertical.)
+(ALIGN-ITENS vai mexer os (itens) na vertical.)
 
-(align-content vai mexer o (grupo de itens) na vertical.)
+(ALIGN-CONTENT vai mexer o (grupo de itens) na vertical.)
 
-(justify-itens vai mexer os (itens) na horizontal.)
+(JUSTIFY_ITENS vai mexer os (itens) na horizontal.)
 
-(justify-content vai mexer o (grupo de itens) na horizontal.) 
+(JUSTIFY_CONTENT vai mexer o (grupo de itens) na horizontal.) 
  
+Para fazermos o item ou os itens ocuparem mais de uma linha ou coluna, usamos a propriedade grid-column e grid-row.
+(o pai deve estar com display:grid; e o filho ou item, deve ser mexido com grid-column e grid-row)
+EX: 
+<!-- [grid_row_column.png] -->
+<!-- [grid_row_column_resultado.png] -->
+<!-- 
+
+--------------------
+GRID-AUTO-ROWS: auto; (linhas automáticas) 
+GRID-AUTO-COLUMNS: auto; (colunas automáticas)
+--------------------
+
+PLACE-ITEMS: é shorthand de align-items(alinhar verticalmente os itens) e justify-items(alinhar horizontalente os itens), nessa ordem.
+
+PLACE-CONTENT: é shorthand de align-content(alinhar verticalmente o conteudo) e justify-content(alinhar horizontalmente o conteudo), nessa ordem.
+
+-----------------------------
+Propriedades de container para Grids (parte 4)
+
+GRID-TEMPLATE-COLUMNS: repeat(3, auto); (repetir 3 vezes o auto, ou seja, 3 colunas de tamanho automático)
+
+GRID-TEMPLATE-ROWS: repeat(2, 100px); (repetir 2 vezes o 100px, ou seja, 2 linhas de tamanho fixo de 100px)
+------------------------------
+
+GRID-TEMPLATE-COLUMS: 1fr 1fr 1fr; (1fr é uma fração do espaço disponível, ou seja, cada coluna vai ocupar 1/3 do espaço total)
+
+GRID-TEMPLATE-ROWS: 1fr 2fr 1fr; 
+<!-- [unidade_fracional-do-grid.jpeg] -->
+<!--
+
 
 -------------------------------------
 CSS IN LINE: funciona, mas não é muito recomendado. Pois pode dar muito trabalho. Porcausa de sua edição em linha de cada codigo.
