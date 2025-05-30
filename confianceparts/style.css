@@ -5,64 +5,107 @@
 :root {
     --corheader1: #FF0000;
     --cor1: #002856;
-    --cor2:#FFFFFF;
+    --cor2: #FFFFFF;
     --corfooter: #A40E16;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-  
+
 }
 
-header{
+/* HEADER */
+header {
     background-color: var(--cor1);
     color: var(--cor2);
-
-    
-    height: 250px;
+    letter-spacing: 1.5px;
 }
 
-header>h5{
-padding: 10px;
+header>h5 {
+    padding: 10px;
 
     text-align: center;
     background-color: var(--corheader1);
 }
 
-header>section{
+header>section {
     padding: 10px;
-margin-bottom: 10px;
+    margin-bottom: 10px;
 
     display: grid;
-    grid-template: 1fr / auto 900px auto auto;
+    grid-template: 1fr / auto 1fr auto auto;
     align-items: center;
     justify-items: center;
 }
 
-header>section>p,img{
+header>section>p {
     padding: 10px;
     margin: 10px;
 }
 
-header>section>#logoconfiance{
+header>section>#logoconfiance {
     transform: translateX(25%);
 }
 
+header>nav {
 
-
-header>nav{
-    
+    padding: 10px;
     display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-header>nav>a{
+header>nav>a {
+    border-radius: 7px;
+    padding: 10px;
     color: var(--cor2);
     text-decoration: none;
 }
 
+header>nav>a:hover {
+
+    transition: .5s;
+    background-color: var(--corheader1);
+}
+
+#banner {
+    width: 100vw;
+    border: 2px dashed blue;
+
+}
+
+/* MAIN */
+main {
+    color: var(--cor1);
+    margin: 20px 0px;
+    text-align: center;
+}
+
+main>h3,
+h1,
+section {
+    margin: 10px 0px;
+}
+
+main>section.mais-vendidos {
+    display: grid;
+    grid-template: auto 1fr / repeat(4, 1fr);
+    align-items: center ;
+    justify-items: center;
+    margin: 20px 100px;
+}
+
+.mais-vendidos>p{
+    margin: 10px;
+}
+
+.mais-vendidos>h2 {
+    grid-column: 1/5;
+}
 
 
 
@@ -71,45 +114,68 @@ header>nav>a{
 
 
 
-footer{
+
+
+
+
+
+
+
+
+.newsletter{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    margin: 0px;
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
     color: var(--cor2);
     background-color: var(--corfooter);
     text-align: center;
-    padding: 30px 100px ;
-    
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
 }
 
-footer>img{
+footer>img {
     margin: 10px;
-    
+
 }
 
-footer>a>img{
+footer>a>img {
     margin: 10px 10px 20px 10px;
 }
 
-footer>div{
+footer>div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
-footer>div>a{
+footer>div>a {
     color: var(--cor2);
     text-decoration: none;
     padding: 5px;
+
 }
 
-footer>form{
+footer>form {
     margin: 20px 0px;
 }
 
-footer>form>label>input, button{
+footer>form>label>input,
+button {
     padding: 15px;
-   
+
 }
 
-footer>p{
+footer>p {
     padding: 15px;
 }
-
