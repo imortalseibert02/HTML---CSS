@@ -11,17 +11,21 @@
 
 * {
     margin: 0;
+    
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
+
 /* HEADER */
 header {
     background-color: var(--cor1);
     color: var(--cor2);
     letter-spacing: 1.5px;
+    position: sticky;
+    top: 0;
 }
 
 header>h5 {
@@ -73,7 +77,7 @@ header>nav>a:hover {
 }
 
 #banner {
-    width: 100vw;
+    width: 99vw;
     border: 2px dashed blue;
 
 }
@@ -94,13 +98,28 @@ section {
 main>section.mais-vendidos {
     display: grid;
     grid-template: auto 1fr / repeat(4, 1fr);
-    align-items: center ;
+    align-items: center;
     justify-items: center;
-    margin: 20px 100px;
+    margin: 70px 100px 100px 100px;
 }
 
-.mais-vendidos>p{
+.mais-vendidos>p {
     margin: 10px;
+}
+
+.mais-vendidos>p>a {
+    background-color: var(--corheader1);
+    padding: 10px;
+    color: var(--cor2);
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.mais-vendidos>p>a:hover {
+    transition: .5s;
+    background-color: #ff6060;
+    color: var(--cor2);
+
 }
 
 .mais-vendidos>h2 {
@@ -108,31 +127,201 @@ main>section.mais-vendidos {
 }
 
 
+main>section.ofertas-imperdiveis {
+    display: grid;
+    grid-template: auto 1fr / repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 70px 100px 100px 100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.newsletter{
-    background-color: var(--cor1);
+.ofertas-imperdiveis>p>a {
+    background-color: var(--corheader1);
+    padding: 10px;
     color: var(--cor2);
-    margin: 0px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.ofertas-imperdiveis>p>a:hover {
+    transition: .5s;
+    background-color: #ff6060;
+    color: var(--cor2);
+
+}
+
+.ofertas-imperdiveis>p {
+    margin: 10px;
+}
+
+.ofertas-imperdiveis>h2 {
+    grid-column: 1/5;
+}
+
+main>section.lançamentos {
+    display: grid;
+    grid-template: auto 1fr / repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 70px 100px 100px 100px;
+}
+
+.lançamentos>p>a {
+    background-color: var(--corheader1);
+    padding: 10px;
+    color: var(--cor2);
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.lançamentos>p>a:hover {
+    transition: .5s;
+    background-color: #ff6060;
+    color: var(--cor2);
+
+}
+
+.lançamentos>p {
+    margin: 10px;
+}
+
+.lançamentos>h2 {
+    grid-column: 1/5;
+}
+
+main>section.nossas-categorias {
+    display: grid;
+    grid-template: auto 1fr / repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 70px 100px 100px 100px;
+    align-items: start;
+
+}
+
+.nossas-categorias>img {
+
+    border-radius: 50px;
+}
+
+.nossas-categorias>p {
+    margin: 10px;
+}
+
+.nossas-categorias>h2 {
+    grid-column: 1/5;
+}
+
+.produto-principal {
+    margin-top: 150px;
+    display: grid;
+    grid-template: auto 1fr / 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    align-items: center
+}
+
+.produto-principal>p>a {
+    background-color: var(--corheader1);
+    padding: 10px;
+    color: var(--cor2);
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.produto-principal>p>a:hover {
+    transition: .5s;
+    background-color: #ff6060;
+    color: var(--cor2);
+
+}
+
+#r5000 {
+    grid-row: 1 / 3;
+}
+
+.produto-principal>p {
+    font-size: 1.5em;
+    line-height: 1em;
 }
 
 
 
+.midias-confiance {
+    margin: 100px 100px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template: auto 70px 50px auto repeat(2, 50px)/ 1fr;
+}
+
+.midias-confiance>h2 {
+    font-size: 1.8em;
+    line-height: 1.5em;
+
+    padding: 20px;
+    margin: 100px;
+}
+
+.midias-confiance>a {
+    text-decoration: none;
+}
+
+.midias-confiance>a>#logoyoutube {
+    margin-top: 50px;
+}
+
+.marcas-trabalhamos {
+    display: grid;
+    grid-template: 100px 100px / repeat(6, 100px);
+    align-items: center;
+
+    justify-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    margin-bottom: 100px;
+}
+
+.marcas-trabalhamos>h2 {
+    grid-column: 1/7;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0px;
+
+}
+
+.newsletter {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    margin: 40px 0px;
+    padding: 60px;
+}
+
+.newsletter>h2 {
+    font-size: 2em;
+}
+
+.newsletter>p {
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.newsletter>form {
+    padding: 10px;
+    margin: 20px 0px;
+}
 
 
 
+.newsletter>form>label>input {
+    padding: 15px;
+
+}
 
 
 /* FOOTER */
@@ -142,6 +331,7 @@ footer {
     text-align: center;
     letter-spacing: 1.5px;
     font-size: 1.2em;
+   
 }
 
 footer>img {
