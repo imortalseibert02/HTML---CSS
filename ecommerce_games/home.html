@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="desktop.css">
+
+
+
+   
     <title>GameHub</title>
 </head>
 
 <body>
-    <header>
-        <!-- LOGO DA MARCA DE GAMES -->
-        <img src="#" alt="LOGO GAMEHUB">
-        <!-- ------------------------ -->
-        <!-- ------------------------ -->
-        <nav>      
-            <ul> <!-- MENU DE NAVEGAÇÃO   -->
+    <header id="header">
+
+        <a id="logo" href="#">Logo</a>
+        <nav id="nav">
+            <button id="btn-mobile">Menu</button>
+            <ul id="menu">
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Jogos</a></li>
                 <li><a href="#">Consoles</a></li>
@@ -23,24 +26,86 @@
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-        <!-- ----------------------------------------- -->
-        <!-- ÍCONES DE PESQUISA, CARRINHO E USUÁRIO -->
-        <img src="#" alt="IMG lupa">
-        <img src="#" alt="IMG carrinho">
-        <img src="#" alt="IMG pessoa">
-        <!-- ----------------------------------------- -->
-        <!-- BANNER PRINCIPAL -->
-         <br>
-        <img src="#" alt="BANNER principal">
-    </header>
-    <!-- ----------------------------------------- -->
-    <main>
- <h1>GAME HUB</h1>
- <h2>
-    Bem-vindo ao GameHub, sua loja online de jogos, consoles e acessórios!
-    Aqui você encontrará uma ampla seleção dos melhores jogos, consoles de última geração e acessórios essenciais para aprimorar sua experiência de jogo. Navegue por nossas categorias, descubra as últimas novidades e aproveite ofertas exclusivas. Junte-se à nossa comunidade de gamers e mergulhe no mundo dos jogos com o GameHub!
- </h2>
-    </main>
-</body>
 
+
+
+
+
+
+
+    </header>
+    <!--
+    
+    <div class="banner-principal">
+        <img src="https://images.pexels.com/photos/7862505/pexels-photo-7862505.jpeg?auto=compress&cs=tinysrgb&w=300"
+            width="100px" alt="BANNER principal">
+    </div>
+    <main>
+        <h1>GAME HUB</h1>
+        <h2>
+            Bem-vindo ao GameHub, sua loja online de jogos, consoles e acessórios!
+            Aqui você encontrará uma ampla seleção dos melhores jogos, consoles de última geração e acessórios
+            essenciais para aprimorar sua experiência de jogo. Navegue por nossas categorias, descubra as últimas
+            novidades e aproveite ofertas exclusivas. Junte-se à nossa comunidade de gamers e mergulhe no mundo dos
+            jogos com o GameHub!
+        </h2>
+
+        <section class="plataformas">
+            <h3 class="titulo-section">PlayStation 2</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+
+        <section class="plataformas">
+            <h3 class="titulo-section"> PlayStation 4</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+
+        <section class="plataformas">
+            <h3 class="titulo-section"> Xbox</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+
+        <section class="plataformas">
+            <h3 class="titulo-section">Pc</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+
+        <section class="plataformas">
+            <h3 class="titulo-section">Nintendo</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+    </main>
+
+    <footer>
+        <img src="https://bing.com/th/id/BCO.3e6f099b-af51-4507-8a1a-509dd971e6f1.png" width="70"">
+        <p>&copy; 2025 GameHub. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href=" #"><em>Felipe Seibert</em></a></p>
+        <p>Contato:
+    </footer> -->
+</body>
+    <script>
+        const btnMobile = document.getElementById('btn-mobile');
+    
+    function toggleMenu() {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+    }
+    
+    btnMobile.addEventListener('click', toggleMenu);
+    </script>
 </html>
