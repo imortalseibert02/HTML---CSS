@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* https://images.pexels.com/photos/1579240/pexels-photo-1579240.jpeg?auto=compress&cs=tinysrgb&w=400 (foto controle ps2, fundo amarelo)
+
+https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=400 (foto controle xbox, fundo azul)
+
+https://images.pexels.com/photos/2520829/pexels-photo-2520829.jpeg?auto=compress&cs=tinysrgb&w=400 (foto controle ps4, fundo azul)
+
+https://images.pexels.com/photos/7862243/pexels-photo-7862243.jpeg?auto=compress&cs=tinysrgb&w=400 (foto controle ps5, fundo amarelo escurecido)
+
+https://images.pexels.com/photos/4009588/pexels-photo-4009588.jpeg?auto=compress&cs=tinysrgb&w=400 (foto controle ps5, ps4, nintendo fundo branco)
+
+https://images.pexels.com/photos/4523022/pexels-photo-4523022.jpeg?auto=compress&cs=tinysrgb&w=400 (foto ps4, nintendo, teclado, fundo branco)
+
+https://images.pexels.com/photos/7862505/pexels-photo-7862505.jpeg?auto=compress&cs=tinysrgb&w=300 (banner principal)
+*/
+
+/* Variáveis de cores */
+:root {
+    --cor1: var(#06031C);
+    --cor2: var(#DFFF03);
+    --cor3: var(#FFFFFF);
+    --cor4: var(#03FFD2);
+    --cor5: var(#010326);
+    --cor6: var(#F2E8D5);
+    --cor7: var(#000080);
+    --cor8: var(#8C8C8C);
+    --cor9: var(#737373);
+    --cor10: var(#595959);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none ;
+    text-decoration: none;
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px dashed blue;
+}
